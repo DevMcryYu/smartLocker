@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.devmcryyu.smartlocker.Main.MainActivity">
+
+
+    <fragment
+        android:id="@+id/info"
+        android:name="com.devmcryyu.smartlocker.Main.infoFragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginStart="10dp"
+        android:visibility="gone"
+        app:elevation="8dp"
+        android:clickable="true"/>
+
+    <com.baidu.mapapi.map.MapView
+        android:id="@+id/baiduMapView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clickable="true">
+
+    </com.baidu.mapapi.map.MapView>
+
+    <android.support.design.widget.FloatingActionButton
+
+        android:id="@+id/account_fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:backgroundTint="@color/colorWhite"
+        android:clickable="true"
+        android:foregroundGravity="right|top"
+        android:src="@mipmap/user"
+        app:borderWidth="0dp"
+        app:elevation="2dp"
+        app:layout_anchor="@+id/baiduMapView"
+        app:layout_anchorGravity="top|right"
+        app:useCompatPadding="false" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/gps_fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:backgroundTint="@color/colorWhite"
+        android:clickable="true"
+        android:src="@mipmap/gps_fixed"
+        app:borderWidth="0dp"
+        app:elevation="2dp"
+        app:layout_anchor="@+id/baiduMapView"
+        app:layout_anchorGravity="bottom|left"
+        app:useCompatPadding="false" />
+
+
+</android.support.design.widget.CoordinatorLayout>
